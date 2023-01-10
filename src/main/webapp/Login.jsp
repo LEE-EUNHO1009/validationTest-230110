@@ -56,6 +56,9 @@
 			alert('비밀번호는 숫자만 가능합니다.');
 			return false;
 		}
+		document.LoginForm.submit();
+		
+		
 	}
 
 </script>
@@ -64,7 +67,11 @@
 	<form action="result.jsp" name="LoginForm" onsubmit="return checkIdPw()">
 		아이디 : <input type="text" name="id"><br><br>
 		비밀번호 : <input type="text" name="pw"><br><br>
-		<input type="submit" value="제출하기">
+		<input type="submit" value="제출하기"><br>
+		<input type="button" value="입력하기" onclick="checkIdPw()"><br><br>
+		<input type="button" value="네이버로가기" onclick="javascript:window.location='http://naver.com'">
+		<br>
+	
 	</form>
 </body>
 </html>
